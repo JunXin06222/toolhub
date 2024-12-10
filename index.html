@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>實用工具集</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .tools-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        .tool-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .tool-card h3 {
+            margin: 0 0 15px 0;
+            color: #2c3e50;
+            font-size: 1.5em;
+        }
+
+        .tool-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .tool-card a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #2196F3, #1976D2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tool-card a:hover {
+            background: linear-gradient(45deg, #1976D2, #2196F3);
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5em;
+            margin: 40px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .tools-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的實用工具集</h1>
+    </header>
+
+    <div class="tools-container">
+        <div class="tool-card">
+            <h3>qrcode製作、短網址小工具</h3>
+            <p>方便無廣告的qrcode製作、短網址小工具</p>
+            <a href="qrcode maker/index.html">前往</a>
+        </div>
+
+        <div class="tool-card">
+            <h3>日期時間計算工具</h3>
+            <p>方便無廣告的日期時間計算工具</p>
+            <a href="day tool/index.html">前往</a>
+        </div>
+
+        <div class="tool-card">
+            <h3>字數計算器</h3>
+            <p>方便無廣告的字數計算器</p>
+            <a href="text/index.html">前往</a>
+        </div>
+      
+      
+    </div>
+</body>
+</html> 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code & 條碼產生 & 短網址</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="back-btn-container">
+            <a href="../index.html" class="back-btn">返回主頁</a>
+        </div>
+        <h1>QRCode & 條碼產生 & 短網址</h1>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="qr">QR Code</button>
+            <button class="tab-btn" data-tab="barcode">條碼</button>
+            <button class="tab-btn" data-tab="shorturl">短網址</button>
+        </div>
+        <div class="input-section">
+            <input type="text" id="text-input" placeholder="請輸入文字或網址" class="animate-input">
+            <select id="barcode-type" style="display: none;">
+                <option value="CODE128">CODE128</option>
+                <option value="EAN13">EAN-13</option>
+                <option value="CODE39">CODE39</option>
+            </select>
+            <button onclick="generateCode()" class="generate-btn">
+                <span class="btn-text">產生</span>
+                <div class="loading-spinner"></div>
+            </button>
+        </div>
+        <div id="qrcode" class="code-container"></div>
+        <div id="barcode-container" class="code-container" style="display: none;">
+            <svg id="barcode"></svg>
+        </div>
+        <div id="shorturl-container" class="code-container" style="display: none;">
+            <div class="shorturl-result">
+                <input type="text" id="shorturl-result" readonly>
+                <button onclick="copyShortUrl()" class="copy-btn">
+                    <span>複製</span>
+                </button>
+            </div>
+        </div>
+        <button id="download-btn" onclick="downloadCode()" style="display: none;">下載圖片</button>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html> 

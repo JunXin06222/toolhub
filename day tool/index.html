@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期時間計算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-btn-container">
+            <a href="../index.html" class="back-btn">返回主頁</a>
+        </div>
+        <h1>日期時間計算器</h1>
+        
+        <div class="calculator-section">
+            <h2>日期差異計算</h2>
+            <div class="input-group">
+                <label>起始日期：</label>
+                <input type="date" id="startDate">
+            </div>
+            <div class="input-group">
+                <label>結束日期：</label>
+                <input type="date" id="endDate">
+            </div>
+            <div class="button-group">
+                <button onclick="calculateDateDifference()">計算</button>
+                <button onclick="resetDateCalculator()" class="reset-btn">重置</button>
+            </div>
+            <div id="dateResult" class="result-container">
+                <p id="yearsResult"></p>
+                <p id="monthsResult"></p>
+                <p id="daysResult"></p>
+                <p id="totalDaysResult"></p>
+            </div>
+        </div>
+
+        <div class="calculator-section">
+            <h2>時間差異計算</h2>
+            <div class="time-calculator">
+                <div class="input-group">
+                    <label>開始時間：</label>
+                    <input type="time" id="startTime" step="1">
+                </div>
+                <div class="input-group">
+                    <label>結束時間：</label>
+                    <input type="time" id="endTime" step="1">
+                </div>
+                <div class="button-group">
+                    <button onclick="calculateTimeDifference()">計算</button>
+                    <button onclick="resetTimeCalculator()" class="reset-btn">重置</button>
+                </div>
+                <div id="timeResult" class="result-container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
